@@ -17,8 +17,9 @@
             <div class="content">
                 <div class="inner">
                     <h1>ExchangeBot</h1>
-                    <p>A description of your AI Stock TradeBot and its features.</p>
-                    <button> start trading</button>
+                    <p>The future of trade.</p>
+                    <button id="startButton">Start Trading</button>
+
                     <!-- idk james do what you want on this page or whatever so that we can start making the bot actally bot. -->
                 </div>
             </div>
@@ -48,5 +49,21 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/bot.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var startButton = document.getElementById("startButton");
+            startButton.addEventListener("click", function () {
+                // Create an input element
+                var inputField = document.createElement("input");
+                inputField.type = "text"; // You can change the input type as needed
+                inputField.placeholder = "Enter a vaild key to continue"; // Optional placeholder text
+                inputField.id = "inputField"; // Set an ID for the input field
+    
+                // Replace the button with the input field
+                startButton.parentNode.replaceChild(inputField, startButton);
+            });
+        });
+    </script>
+    
 </body>
 </html>
